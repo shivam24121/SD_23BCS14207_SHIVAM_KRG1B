@@ -1,0 +1,416 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="ticket-booking-pro" name="Ticket Booking System Detailed">
+    <mxGraphModel dx="1585" dy="4811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="divider" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#E5E7EB;strokeWidth=3;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hld-title" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=22;fontStyle=1;fontColor=#111827;" value="6. High Level Design (HLD) Architecture" vertex="1">
+          <mxGeometry height="40" width="500" x="415" y="-30" as="geometry" />
+        </mxCell>
+        <mxCell id="group-svc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;dashed=1;align=center;verticalAlign=top;spacingTop=10;fontSize=14;fontColor=#334155;fontStyle=1;opacity=70;" value="Microservices Mesh / K8s Cluster" vertex="1">
+          <mxGeometry height="820" width="220" x="915" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="group-db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#bbf7d0;dashed=1;align=center;verticalAlign=top;spacingTop=10;fontSize=14;fontColor=#16a34a;fontStyle=1;opacity=70;" value="Data Storage &amp;amp; Caching Layer" vertex="1">
+          <mxGeometry height="660" width="160" x="1185" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="group-event" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdf4ff;strokeColor=#fbcfe8;dashed=1;align=center;verticalAlign=top;spacingTop=10;fontSize=14;fontColor=#c026d3;fontStyle=1;opacity=70;" value="Event Streaming Pipeline" vertex="1">
+          <mxGeometry height="340" width="160" x="1410" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="shape=image;image=img/lib/active_directory/users.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=14;fontColor=#000000;fontFamily=Helvetica;" value="End Users&#xa;(Web / Mobile Apps)" vertex="1">
+          <mxGeometry height="90" width="90" x="400" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" parent="1" style="shape=image;image=img/lib/azure2/app_services/CDN_Profiles.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontColor=#333333;fontFamily=Helvetica;" value="Global CDN&#xa;Edge Routing" vertex="1">
+          <mxGeometry height="80" width="80" x="390" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="api-gateway" parent="1" style="shape=mxgraph.aws4.endpoint;fillColor=#E7157B;verticalLabelPosition=bottom;verticalAlign=top;fontColor=#232F3E;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=13;fontFamily=Helvetica;" value="API Gateway / LB&#xa;Routing &amp; Rate Limiting" vertex="1">
+          <mxGeometry height="90" width="90" x="670" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-1" edge="1" parent="1" source="auth-service" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="search-service" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="auth-service" parent="1" style="shape=image;image=img/lib/azure2/identity/Multi_Factor_Authentication.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="Auth &amp; User Service" vertex="1">
+          <mxGeometry height="80" width="80" x="985" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="search-service" parent="1" style="shape=image;image=img/lib/azure2/app_services/Search_Services.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="Search Service" vertex="1">
+          <mxGeometry height="80" width="80" x="985" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog-service" parent="1" style="shape=mxgraph.gcp2.view_list;fillColor=#3B8DF1;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;strokeColor=none;fontFamily=Helvetica;" value="Catalog Service" vertex="1">
+          <mxGeometry height="80" width="65" x="990" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="booking-service" parent="1" style="shape=image;image=img/lib/azure2/compute/Function_Apps.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="Booking Engine" vertex="1">
+          <mxGeometry height="80" width="80" x="970" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="user-db" parent="1" style="shape=image;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="User DB&#xa;(PostgreSQL)" vertex="1">
+          <mxGeometry height="60" width="60" x="1235" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="es-cluster" parent="1" style="shape=mxgraph.aws3.elasticsearch_service;fillColor=#F58534;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="ElasticSearch&#xa;Indexed Data" vertex="1">
+          <mxGeometry height="70" width="70" x="1230" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="event-db" parent="1" style="shape=image;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="Event Database&#xa;(Read Replicas)" vertex="1">
+          <mxGeometry height="60" width="60" x="1235" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="redis-cache" parent="1" style="shape=image;image=img/lib/mscae/Cache_Redis_Product.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="Redis Cluster&#xa;(Cache &amp; Lock TTL)" vertex="1">
+          <mxGeometry height="60" width="70" x="1230" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="booking-db" parent="1" style="shape=image;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="Booking DB&#xa;(Strict ACID)" vertex="1">
+          <mxGeometry height="60" width="60" x="1235" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="pg-ext" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#475569;fontStyle=1;fontSize=13;verticalAlign=middle;fontFamily=Helvetica;" value="Third Party&#xa;Stripe/Bank API" vertex="1">
+          <mxGeometry height="60" width="120" x="1205" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka" parent="1" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.managed_streaming_for_kafka;fillColor=#8C4FFF;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#ffffff;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="Message Bus&#xa;(Apache Kafka)" vertex="1">
+          <mxGeometry height="80" width="80" x="1450" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="notification" parent="1" style="shape=image;image=img/lib/azure2/integration/Event_Grid_Topics.svg;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fontStyle=1;fontSize=12;fontFamily=Helvetica;" value="Notification Service&#xa;(Email &amp; Push)" vertex="1">
+          <mxGeometry height="80" width="80" x="1450" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cli_cdn" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_cli_cdn" connectable="0" parent="e_cli_cdn" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#FFFFFF;fontSize=11;fontColor=#333333;fontStyle=1;fontFamily=Helvetica;" value="Fetch Static Assets&#xa;(Images/CSS/JS)" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3" y="-156" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cli_api" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;" target="api-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_cli_api" connectable="0" parent="e_cli_api" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="Dynamic Data Requests&#xa;REST/JSON" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_api_auth" edge="1" parent="1" source="api-gateway" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2563EB;strokeWidth=2;rounded=1;" target="auth-service">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="595" />
+              <mxPoint x="825" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_api_auth" connectable="0" parent="e_api_auth" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="Validate Auth JWT" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45" y="-145" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_api_search" edge="1" parent="1" source="api-gateway" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#D97706;strokeWidth=2;rounded=1;" target="search-service">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="865" y="595" />
+              <mxPoint x="865" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_api_search" connectable="0" parent="e_api_search" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="Typeahead / Filter queries" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45" y="-105" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_api_catalog" edge="1" parent="1" source="api-gateway" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#059669;strokeWidth=2;rounded=1;" target="catalog-service">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="895" y="595" />
+              <mxPoint x="895" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_api_catalog" connectable="0" parent="e_api_catalog" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="Get Show Details" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="37" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_api_booking" edge="1" parent="1" source="api-gateway" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#7C3AED;strokeWidth=2;rounded=1;" target="booking-service">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="865" y="595" />
+              <mxPoint x="865" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_api_booking" connectable="0" parent="e_api_booking" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="Select Seat &amp; Intiate Tx" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="35" y="68" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_api_payment" edge="1" parent="1" source="api-gateway" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E11D48;strokeWidth=2;rounded=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="595" />
+              <mxPoint x="825" y="930" />
+            </Array>
+            <mxPoint x="970" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_api_payment" connectable="0" parent="e_api_payment" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="Secure Checkout Request" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-60" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_auth_db" edge="1" parent="1" source="auth-service" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;" target="user-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_auth_db" connectable="0" parent="e_auth_db" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontFamily=Helvetica;" value="Fetch Credentials" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_search_es" edge="1" parent="1" source="search-service" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;" target="es-cluster">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_search_es" connectable="0" parent="e_search_es" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontFamily=Helvetica;" value="Full-Text Index Query" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cat_redis" edge="1" parent="1" source="catalog-service" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#059669;strokeWidth=2;rounded=1;" target="redis-cache">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1115" y="590" />
+              <mxPoint x="1115" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_cat_redis" connectable="0" parent="e_cat_redis" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontFamily=Helvetica;" value="Read Fast Cache" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cat_db" edge="1" parent="1" source="catalog-service" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;" target="event-db">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1115" y="590" />
+              <mxPoint x="1115" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_cat_db" connectable="0" parent="e_cat_db" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontFamily=Helvetica;" value="Fetch on Miss" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="6" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_book_redis" edge="1" parent="1" source="booking-service" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#7C3AED;strokeWidth=2;rounded=1;" target="redis-cache">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1135" y="750" />
+              <mxPoint x="1135" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_book_redis" connectable="0" parent="e_book_redis" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontFamily=Helvetica;" value="Acquire 10-min Seat Lock" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_book_db" edge="1" parent="1" source="booking-service" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;" target="booking-db">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1115" y="750" />
+              <mxPoint x="1115" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_book_db" connectable="0" parent="e_book_db" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontFamily=Helvetica;" value="Create Pending Ticket Row" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="42" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_pay_ext" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;" target="pg-ext">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1065" y="930" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_pay_ext" connectable="0" parent="e_pay_ext" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontFamily=Helvetica;" value="Validate Auth / Charge" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_pay_hook" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E11D48;strokeWidth=2;rounded=1;dashed=1;" target="booking-service">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1155" y="930" />
+              <mxPoint x="1155" y="750" />
+            </Array>
+            <mxPoint x="1065" y="930" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_pay_hook" connectable="0" parent="e_pay_hook" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontColor=#E11D48;fontFamily=Helvetica;" value="Successful Payment Webhook" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cdc_events" edge="1" parent="1" source="event-db" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;dashed=1;" target="es-cluster">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1345" y="590" />
+              <mxPoint x="1345" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_cdc_events" connectable="0" parent="e_cdc_events" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontColor=#4B5563;fontFamily=Helvetica;" value="CDC Pipeline&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cdc_kafka" edge="1" parent="1" source="booking-db" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4B5563;strokeWidth=2;rounded=1;dashed=1;" target="kafka">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1345" y="800" />
+              <mxPoint x="1345" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_cdc_kafka" connectable="0" parent="e_cdc_kafka" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontColor=#4B5563;fontFamily=Helvetica;" value="Broadcast Booking Completes" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_kafka_notify" edge="1" parent="1" source="kafka" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#8C4FFF;strokeWidth=2;rounded=1;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1475" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_kafka_notify" connectable="0" parent="e_kafka_notify" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=10;fontStyle=1;fontColor=#8C4FFF;fontFamily=Helvetica;" value="Trigger Mail Job Tasks" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_notify_client" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#8C4FFF;strokeWidth=2;rounded=1;dashed=1;" target="client">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="110" />
+              <mxPoint x="510" y="110" />
+            </Array>
+            <mxPoint x="1490" y="530" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_notify_client" connectable="0" parent="e_notify_client" style="edgeLabel;html=1;align=center;verticalAlign=middle;backgroundColor=#FFFFFF;fontSize=12;fontStyle=1;fontColor=#8C4FFF;fontFamily=Helvetica;" value="Asynchronously Deliver Ticket Attachments (PDF/SMS)" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=14;" value="&lt;b&gt;Ticket Booking System:&lt;/b&gt; To design a platform for discovering and purchasing tickets for movies, concerts, and live events.&lt;br&gt;&lt;br&gt;Users can search, view event details, select seats, and complete ticket purchases through the platform." vertex="1">
+          <mxGeometry height="60" width="1000" x="450" y="-2450" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-41" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=14;fontStyle=1;strokeColor=default;fillColor=none;" value="Functional Requirements" vertex="1">
+          <mxGeometry height="40" width="280" x="450" y="-2330" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="1. Search Functionality: Users must be able to discover events using filters - Event Title, City / Location, and specific Date of the show." vertex="1">
+          <mxGeometry height="30" width="1200" x="450" y="-2250" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="2. Event Information Display: Users must be able to view comprehensive details - No. of Seats (available vs. occupied), Description, and Metadata (cast, duration, language, ratings)." vertex="1">
+          <mxGeometry height="30" width="1200" x="450" y="-2190" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-44" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="3. Booking Execution: The system must allow a user to select a seat and complete a transaction to Book a Ticket." vertex="1">
+          <mxGeometry height="30" width="1200" x="450" y="-2130" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=14;fontStyle=1;strokeColor=default;fillColor=none;" value="Non-Functional Requirements" vertex="1">
+          <mxGeometry height="40" width="280" x="450" y="-2050" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="1. Target Scale: 100 Million Daily Active Users (DAU)" vertex="1">
+          <mxGeometry height="30" width="1200" x="450" y="-1970" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="2. CAP Theorem:" vertex="1">
+          <mxGeometry height="30" width="1200" x="450" y="-1910" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-48" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="Search / View Aspect: High Availability - better to show slightly stale data than an error page. (Eventual Consistency)" vertex="1">
+          <mxGeometry height="30" width="1200" x="510" y="-1870" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-49" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="Booking Aspect: High Consistency - two users should never be able to book the exact same seat simultaneously. (Strong Consistency)" vertex="1">
+          <mxGeometry height="30" width="1200" x="510" y="-1830" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-50" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="3. Latency: Search results should load within less than 200ms. Seat lock during booking must be confirmed within less than 500ms." vertex="1">
+          <mxGeometry height="30" width="1200" x="450" y="-1770" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=14;fontStyle=1;strokeColor=default;fillColor=none;" value="Core-Entities" vertex="1">
+          <mxGeometry height="40" width="280" x="450" y="-1690" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="1. User" vertex="1">
+          <mxGeometry height="30" width="300" x="450" y="-1610" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="2. Event" vertex="1">
+          <mxGeometry height="30" width="300" x="450" y="-1570" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="3. Venue / Screen" vertex="1">
+          <mxGeometry height="30" width="300" x="450" y="-1530" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-55" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="4. Seat" vertex="1">
+          <mxGeometry height="30" width="300" x="450" y="-1490" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-56" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="5. Booking / Ticket" vertex="1">
+          <mxGeometry height="30" width="300" x="450" y="-1450" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="6. Payment" vertex="1">
+          <mxGeometry height="30" width="300" x="450" y="-1410" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-58" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=14;fontStyle=1;strokeColor=default;fillColor=none;" value="API Endpoints" vertex="1">
+          <mxGeometry height="40" width="280" x="450" y="-1330" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-59" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontStyle=1;" value="User" vertex="1">
+          <mxGeometry height="30" width="200" x="450" y="-1250" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-60" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="1. GET: /api/events?title=X&amp;amp;city=Y&amp;amp;date=Z" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-1210" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-61" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="[Search events by title, city and date - returns paginated list of Event summaries]" vertex="1">
+          <mxGeometry height="30" width="1000" x="450" y="-1170" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-62" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="Response: List { eventID, title, venue, date, availableSeats }" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-1130" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-63" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="2. GET: /api/events/{eventID}" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-1070" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-64" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="[Fetch full event details - description, metadata, seat map with availability status]" vertex="1">
+          <mxGeometry height="30" width="1000" x="450" y="-1030" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="Response: EventDetail { eventID, title, description, cast, duration, language, rating, seats: List }" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-990" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-66" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="3. POST: /api/bookings" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-930" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-67" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="[Initiate a booking - lock the seat temporarily while payment is being processed]" vertex="1">
+          <mxGeometry height="30" width="1000" x="450" y="-890" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="req body: { eventID, seatID, userID, paymentToken }" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-850" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-69" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="res body: { bookingID, status: CONFIRMED | FAILED, ticketDetails }" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-810" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-70" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="4. GET: /api/bookings/{bookingID}" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-750" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="[Retrieve booking confirmation and ticket details]" vertex="1">
+          <mxGeometry height="30" width="1000" x="450" y="-710" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-72" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="5. DELETE: /api/bookings/{bookingID}" vertex="1">
+          <mxGeometry height="30" width="1000" x="510" y="-650" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-73" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="[Cancel a booking - releases the seat back to available pool]" vertex="1">
+          <mxGeometry height="30" width="1000" x="450" y="-610" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-74" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=14;fontStyle=1;strokeColor=default;fillColor=none;" value="Database Schema Design" vertex="1">
+          <mxGeometry height="40" width="280" x="450" y="-530" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-75" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;" value="&amp;nbsp; users (PostgreSQL - relational)&lt;br&gt;&lt;br&gt;userID (PK, UUID)&lt;br&gt;name (VARCHAR)&lt;br&gt;email (VARCHAR, UNIQUE)&lt;br&gt;phone (VARCHAR)&lt;br&gt;createdAt (TIMESTAMP)" vertex="1">
+          <mxGeometry height="150" width="800" x="450" y="-450" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-76" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;" value="&amp;nbsp; events (PostgreSQL - relational)&lt;br&gt;&lt;br&gt;eventID (PK, UUID)&lt;br&gt;title (VARCHAR)&lt;br&gt;description (TEXT)&lt;br&gt;venueID (FK, UUID)&lt;br&gt;startTime (TIMESTAMP)&lt;br&gt;endTime (TIMESTAMP)" vertex="1">
+          <mxGeometry height="150" width="800" x="450" y="-310" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;" value="&amp;nbsp; bookings (PostgreSQL - relational)&lt;br&gt;&lt;br&gt;bookingID (PK, UUID)&lt;br&gt;userID (FK, UUID)&lt;br&gt;seatID (FK, UUID)&lt;br&gt;status (ENUM: PENDING, CONFIRMED, CANCELLED)&lt;br&gt;amount (DECIMAL)" vertex="1">
+          <mxGeometry height="150" width="800" x="450" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="w3Z3quPdJxVzz6ZpwIV2-80" parent="1" style="html=1;whiteSpace=wrap;strokeColor=none;fillColor=#0079D6;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;align=center;fontSize=12;outlineConnect=0;spacingTop=-6;fontColor=#FFFFFF;sketch=0;shape=mxgraph.sitemap.payment;" value="Payment" vertex="1">
+          <mxGeometry height="60" width="90" x="977.5" y="890" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
